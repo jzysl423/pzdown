@@ -32,4 +32,4 @@ jobs:
         echo "${mdfile:0:-3}:" > DEST
     - name: Rclone Synchronizing file
       run: |
-        rclone copy downloads `cat DEST`
+        rclone --bwlimit 10M copy downloads `cat DEST`
