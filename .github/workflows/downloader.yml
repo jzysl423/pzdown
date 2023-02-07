@@ -5,9 +5,8 @@ on:
 jobs:
   AutoDownloaderProcess:
     runs-on: ubuntu-latest
-    container: node:16.16.0
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Rclone Install
       run: curl https://rclone.org/install.sh | sudo bash
     - name: Aria2 Install
